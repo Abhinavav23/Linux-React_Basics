@@ -5,7 +5,7 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+ <App /> 
 );
 
 
@@ -20,3 +20,7 @@ root.render(
 //   createRoot: function(){
 //   }
 // }
+
+const returnSum = () =>{
+  return 10
+}

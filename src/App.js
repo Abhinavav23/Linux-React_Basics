@@ -1,24 +1,31 @@
 import './App.css';
+// named import with same name and curly braces 
+// and can be multiple in one file
+import { Header } from './components/Header';
+// default import without curly braces, name can be anything 
+// and only one from a file
+import Footer from './components/Footer';
 
 function App() {
+  let name = 'Virat';
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>This is my first app</div>
-      </header>
+    <div>
+      <Header/>
+      {/* <Header2/> */}
+      <Footer/>
     </div>
   );
 }
 
-export default App;
+export default App; 
 
 // JSX ---> javascript and XML
 
-let name = 'abhinav';
+// let name = 'abhinav';
 
-<div id="test">
-write a variable --> name
-</div>
+// <div id="test">
+// write a variable --> name
+// </div>
 
 // dynamic behaviuor in HTML code which is not possible by default 
 // document.getElementById('test').innerText = 'virat'
