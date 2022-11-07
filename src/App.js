@@ -6,15 +6,38 @@ import { Header } from './components/Header/Header';
 // and only one from a file
 import Footer from './components/Footer';
 import { Product } from './components/Product';
+import { Mobile } from './components/Mobile';
+import { Login } from './components/Header/Login';
 
 function App() {
   let name = 'Virat';
+  const sellerInfo = {name: 'Abhinav', address: 'Delhi'}
+  let ram = ['6gb', '4gb', '3gb', '2gb']
+
   return (
     <div>
       <Header/>
       {/* <Header2/> */}
-      <Footer/>
+      
       <Product/>
+      <Mobile 
+      company='Apple' 
+      model={'iphone 14'} 
+      price={80000} 
+      color={'blue'} 
+      rating={5} 
+      instock={true} 
+      ram ={ram}
+      sellerInfo = {{name: 'Abhinav', address: 'Delhi'}}
+      // sellerInfo={sellerInfo}
+      {...sellerInfo}
+      // functions can also be passed as props 
+      />
+      {/* <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5} ram ={['6gb', '4gb']}/>
+      <Mobile company='Xiomi' model='Note 12' price={25000} color='black' rating={4.5}/>
+      <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5}/> */}
+      <Footer/>
+      <Login/>
     </div>
   );
 }
@@ -42,3 +65,4 @@ export default App;
 // }
 
 // let result  = sum()
+

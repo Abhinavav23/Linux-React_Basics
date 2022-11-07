@@ -15,7 +15,6 @@ export function Product(){
         product = <h3>Nothing choosed</h3>
     }
 
-
     console.log('product', product);
     console.log('chosenProduct', chosenProduct);
 
