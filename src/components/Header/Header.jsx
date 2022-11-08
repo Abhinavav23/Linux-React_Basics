@@ -18,7 +18,6 @@ export function Header() {
         <header > 
             <h1 className={style.textWhite}>Linux</h1>
          </header>
-         <button className='loginButton'>test</button>
          <SearchBar/>
          <Login/>
         </div>

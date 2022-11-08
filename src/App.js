@@ -19,25 +19,42 @@ function App() {
       <Header/>
       {/* <Header2/> */}
       
-      <Product/>
+      {/* <Product/> */}
+
       <Mobile 
       company='Apple' 
       model={'iphone 14'} 
       price={80000} 
       color={'blue'} 
       rating={5} 
-      instock={true} 
       ram ={ram}
+      instock
       sellerInfo = {{name: 'Abhinav', address: 'Delhi'}}
       // sellerInfo={sellerInfo}
       {...sellerInfo}
       // functions can also be passed as props 
       />
-      {/* <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5} ram ={['6gb', '4gb']}/>
-      <Mobile company='Xiomi' model='Note 12' price={25000} color='black' rating={4.5}/>
+      <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5} ram ={['6gb', '4gb']}/>
+      {/* <Mobile company='Xiomi' model='Note 12' price={25000} color='black' rating={4.5}/>
       <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5}/> */}
-      <Footer/>
-      <Login/>
+
+      {/* props and children both */}
+
+      {/* <Footer batchName='Java'>
+        <section>
+          <div>This is copyright Linux </div>
+        </section>
+      </Footer> */}
+
+      {/* <Footer>
+        <div>This is a copyright Java</div>
+      </Footer> */}
+
+      {/* <Footer batchName='Linux'>
+        <Login/>  
+      </Footer> */}
+
+      {/* <Login/> */}
     </div>
   );
 }
@@ -66,3 +83,21 @@ export default App;
 
 // let result  = sum()
 
+{/* <Mobile/> ---> self closing tags */}
+
+{/* <div class="dark" id="">
+  This is a div
+  <div></div>
+</div>
+
+
+<br/>
+<input type='text'/> */}
+
+// props.children = <Login/> <Login/>
+
+// let a = 10
+
+// for passing boolean values
+// true 1.instock = {true}  2.instock
+// false 1. instock = {false} 2.

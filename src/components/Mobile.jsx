@@ -1,6 +1,16 @@
+
+
 export function Mobile(props){
     console.log(props);
     // const firstRam = props.ram[0]
+    let value;
+
+    if(props.instock){
+        value = 'available'
+    } else{
+        value = 'not available'
+    }
+    
     return (
         <section>
             <h3>Company: {props.company}</h3>
@@ -9,7 +19,7 @@ export function Mobile(props){
             <div>Price: {props.price}</div>
             <div>Color: {props.color}</div>
             <div>Rating: {props.rating}</div>
-            <div>In Stock: {props.instock}</div>
+            <div>In Stock: {props.instock ? 'available': 'Not available' } </div>
             <div>Ram: {props.ram}</div>
             {/* <div>SellerName: {props.sellerInfo.name}</div>
             <div>Seller Address: {props.sellerInfo.address.city}</div>
@@ -30,10 +40,10 @@ export function Mobile(props){
 // add(4,5) // ---> 9
 
 
-const calculate = function(){
+// const calculate = function(){
 
-}
+// }
 
-const calculate1 = () => {
+// const calculate1 = () => {
 
-}
+// }
