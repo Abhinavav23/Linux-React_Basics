@@ -1,13 +1,15 @@
 import './App.css';
 // named import with same name and curly braces 
 // and can be multiple in one file
-import { Header } from './components/Header/Header';
+import { Header } from './components/Header/Title/Header';
 // default import without curly braces, name can be anything 
 // and only one from a file
 import Footer from './components/Footer';
 import { Product } from './components/Product';
 import { Mobile } from './components/Mobile';
-import { Login } from './components/Header/Login';
+import { Login } from './components/Header/Login/Login';
+import { List } from './components/Lists/List';
+import { ReactElements } from './components/ReactElements/ReactElements';
 
 function App() {
   let name = 'Virat';
@@ -16,12 +18,12 @@ function App() {
 
   return (
     <div>
-      <Header/>
+      {/* <Header/> */}
       {/* <Header2/> */}
       
       {/* <Product/> */}
 
-      <Mobile 
+      {/* <Mobile 
       company='Apple' 
       model={'iphone 14'} 
       price={80000} 
@@ -33,8 +35,8 @@ function App() {
       // sellerInfo={sellerInfo}
       {...sellerInfo}
       // functions can also be passed as props 
-      />
-      <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5} ram ={['6gb', '4gb']}/>
+      /> */}
+      {/* <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5} ram ={['6gb', '4gb']}/> */}
       {/* <Mobile company='Xiomi' model='Note 12' price={25000} color='black' rating={4.5}/>
       <Mobile company='Samsung' model='Galaxy' price={60000} color='black' rating={4.5}/> */}
 
@@ -55,6 +57,8 @@ function App() {
       </Footer> */}
 
       {/* <Login/> */}
+      {/* <List/> */}
+      <ReactElements/>
     </div>
   );
 }

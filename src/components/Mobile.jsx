@@ -29,6 +29,7 @@ export function Mobile(props){
     )
 }
 
+
 // props: arguments passed to a react component
 
 // function add(a,b){

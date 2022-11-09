@@ -1,8 +1,9 @@
 // export default Header;
 // named export
 import style from './Header.module.css';
-import { Login } from './Login';
-import { SearchBar } from './SearchBar';
+import { Login } from '../Login/Login';
+import { SearchBar } from '../SearchBar/SearchBar';
+import {List} from '../../Lists/List'
 
 export function Header() {
     const myStyle = {
