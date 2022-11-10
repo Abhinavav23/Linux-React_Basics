@@ -1,5 +1,3 @@
-
-
 export function Mobile(props){
     console.log(props);
     // const firstRam = props.ram[0]
@@ -10,20 +8,26 @@ export function Mobile(props){
     } else{
         value = 'not available'
     }
+
+    // const structedRam = props.ram.join(',');
+    // console.log(structedRam);
     
     return (
         <section>
             <h3>Company: {props.company}</h3>
             <div>Model: {props.model}</div>
-            <div>Screen Size: 6.5 inch</div>
+            <div>Screen Size: {props.screenSize}</div>
             <div>Price: {props.price}</div>
             <div>Color: {props.color}</div>
             <div>Rating: {props.rating}</div>
-            <div>In Stock: {props.instock ? 'available': 'Not available' } </div>
-            <div>Ram: {props.ram}</div>
+            <div>In Stock: {props.inStock ? 'available': 'Not available' } </div>
+            <div>Ram: {props.ram.join(',')}</div>
             {/* <div>SellerName: {props.sellerInfo.name}</div>
             <div>Seller Address: {props.sellerInfo.address.city}</div>
             <div>Seller Address: {props.name}</div> */}
+            {/* conditional rendering  */}
+            {/* {props.inStock ? <button>buy</button>: null} */}
+            {props.inStock && <button>buy</button>}
             <hr />
         </section>
     )

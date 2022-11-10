@@ -10,6 +10,8 @@ import { Mobile } from './components/Mobile';
 import { Login } from './components/Header/Login/Login';
 import { List } from './components/Lists/List';
 import { ReactElements } from './components/ReactElements/ReactElements';
+import { ProductList } from './components/ProductList/ProductList';
+import MultipleReturn from './components/ConditionalRendering/MultipleReturn';
 
 function App() {
   let name = 'Virat';
@@ -58,7 +60,10 @@ function App() {
 
       {/* <Login/> */}
       {/* <List/> */}
-      <ReactElements/>
+      {/* <ReactElements/> */}
+      <ProductList/>
+      {/* <MultipleReturn segment='grocery'/>
+      <Product/> */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 export function Product(){
     let product;
-    let chosenProduct ='appliances';
+    let chosenProduct ='clothing';
 
     // conditional rendering of element in JSX
     // using if else conditions
