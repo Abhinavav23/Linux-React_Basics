@@ -40,6 +40,18 @@ button{
   padding: 0.25rem 0.5rem;
 }
 
+.main{
+  background-color: rgba(21, 85, 214, 0.817);
+}
+
+.grocery{
+  background-color: rgba(44, 200, 57, 0.758);
+}
+
+.spacing{
+  padding: 0.5rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

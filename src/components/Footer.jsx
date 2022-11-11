@@ -15,6 +15,6 @@ export default Footer;
 // the component between the opening and closing tag of the component
 
 // ternary 
-const a = 'role' ? 'Abhinav' : 'Ins';
-console.log(a);
+// const a = 'role' ? 'Abhinav' : 'Ins';
+// console.log(a);
 

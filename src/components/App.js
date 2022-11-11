@@ -1,17 +1,17 @@
 import './App.css';
 // named import with same name and curly braces 
 // and can be multiple in one file
-import { Header } from './components/Header/Title/Header';
+import { Header } from './Header/Title/Header';
 // default import without curly braces, name can be anything 
 // and only one from a file
-import Footer from './components/Footer';
-import { Product } from './components/Product';
-import { Mobile } from './components/Mobile';
-import { Login } from './components/Header/Login/Login';
-import { List } from './components/Lists/List';
-import { ReactElements } from './components/ReactElements/ReactElements';
-import { ProductList } from './components/ProductList/ProductList';
-import MultipleReturn from './components/ConditionalRendering/MultipleReturn';
+import Footer from './Footer';
+import { Product } from './Product';
+import { Mobile } from './Mobile';
+import { Login } from './Header/Login/Login';
+import { List } from './Lists/List';
+import { ReactElements } from './ReactElements/ReactElements';
+import { ProductList } from './ProductList/ProductList';
+import MultipleReturn from './ConditionalRendering/MultipleReturn';
 
 function App() {
   let name = 'Virat';
@@ -61,7 +61,8 @@ function App() {
       {/* <Login/> */}
       {/* <List/> */}
       {/* <ReactElements/> */}
-      <ProductList/>
+      <ProductList section='main'/>
+      <ProductList direction='col' section='grocery'/>
       {/* <MultipleReturn segment='grocery'/>
       <Product/> */}
     </div>

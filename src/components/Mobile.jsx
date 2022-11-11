@@ -1,5 +1,5 @@
 export function Mobile(props){
-    console.log(props);
+    // console.log(props);
     // const firstRam = props.ram[0]
     let value;
 
@@ -11,10 +11,24 @@ export function Mobile(props){
 
     // const structedRam = props.ram.join(',');
     // console.log(structedRam);
+
+    const mobileStyle = {
+        display:'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        border: '1px solid #3d3d3d',
+        margin: '1rem',
+        padding: '1rem',
+        minWidth: '16rem',
+        borderRadius: '0.25rem',
+        backgroundColor: props.theme === 'dark' ? '#3d3d3d': '#ddd',
+        color: props.theme === 'dark' ? '#ddd': '#3d3d3d',
+       
+    }
     
     return (
-        <section>
-            <h3>Company: {props.company}</h3>
+        <section style={mobileStyle}>
+            <h3>{props.company}</h3>
             <div>Model: {props.model}</div>
             <div>Screen Size: {props.screenSize}</div>
             <div>Price: {props.price}</div>
@@ -27,8 +41,7 @@ export function Mobile(props){
             <div>Seller Address: {props.name}</div> */}
             {/* conditional rendering  */}
             {/* {props.inStock ? <button>buy</button>: null} */}
-            {props.inStock && <button>buy</button>}
-            <hr />
+            {props.inStock ? <button>buy</button> : <><span style={{color: 'red'}}>coming soon</span> <button>Notify me</button></>}
         </section>
     )
 }
