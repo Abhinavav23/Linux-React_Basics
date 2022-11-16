@@ -16,7 +16,7 @@ export const Counter = () => {
     // const abc = useState(0);
     // console.log(abc);
     const [no, setNumber] = useState(0);
-    const [anotherNo, setAnotherNo] = useState('Abhinav');
+    const [anotherNo, setAnotherNo] = useState(100);
     const [loggedIn, setLoggedIn] = useState(false);
     
     // objects and arrays
@@ -41,13 +41,13 @@ export const Counter = () => {
         // console.log('count', count);
     }
 
-    const reset = () => {
-        setNumber(0)
-    }
+    // const reset = () => {
+    //     setNumber(0)
+    // }
 
-    const addNo2 = () => {
-        setAnotherNo(anotherNo+1)
-    }
+    // const addNo2 = () => {
+    //     setAnotherNo(anotherNo+1)
+    // }
 
     const SubNo2 = () => {
         setAnotherNo(anotherNo-1)
@@ -63,13 +63,13 @@ export const Counter = () => {
             <div>Count 1: {no}</div>
             <button onClick={add}>+no1</button>
             <button onClick={sub}>-no1</button>
-            <button onClick={reset}>reset</button>
+            <button onClick={() => setNumber(0)}>reset</button>
         </div>
         <br/>
 
         <div>
             <div>Count 2: {anotherNo}</div>
-            <button onClick={addNo2}>+No2</button>
+            <button onClick={() => setAnotherNo(anotherNo+1)}>+No2</button>
             <button onClick={SubNo2}>-No2</button>
         </div>
 
