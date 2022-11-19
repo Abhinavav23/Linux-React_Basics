@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { FormDetails } from "./FormDetails";
+
 export const SighUpForm = () => {
 
     let userInfo = {
@@ -7,6 +10,8 @@ export const SighUpForm = () => {
         // gender:'',
         // mobile: '',
     }
+
+    const [user, setUser] = useState(userInfo);
 
     const getUserInfo = (e) => {
         // switch case 
@@ -26,6 +31,8 @@ export const SighUpForm = () => {
 
         userInfo[e.target.id]= e.target.value;
 
+        setUser({...userInfo});
+
         // userInfo[e.target.name]= e.target.value;
         // userInfo.name = abhinav
         // userInfo.email = abhinav@mail
@@ -36,24 +43,33 @@ export const SighUpForm = () => {
         console.log(userInfo);
     }
 
+    const getValue = (val) => {
+        console.log(`value recieved is ${val}`);
+    }
+
+    // when a component re rerenders all its child component also re renders
     return (
-        <form onSubmit={createUser}>
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" onChange={getUserInfo}/>
-            <br/>  <br/>
-            <label htmlFor="email">Email</label>
-            <input type="text" id="email" name="email" onChange={getUserInfo}/>
-            <br/>  <br/>
-            <label htmlFor="address">Address</label>
-            <input type="text" id="address" name="address" onChange={getUserInfo}/>
-            <br/>  <br/>
-            <label htmlFor="gender">Gender</label>
-            <input type="text" id="gender" name="gender" onChange={getUserInfo}/>
-            <br/>  <br/>
-            <label htmlFor="mobile">Mob No</label>
-            <input type="text" id="mobile" name="mobile" onChange={getUserInfo}/>
-            <br/>  <br/>
-            <input type="submit" value="submit" />
-        </form>
+        <>
+            <form onSubmit={createUser}>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name" name="name" onChange={getUserInfo}/>
+                <br/>  <br/>
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" name="email" onChange={getUserInfo}/>
+                <br/>  <br/>
+                <label htmlFor="address">Address</label>
+                <input type="text" id="address" name="address" onChange={getUserInfo}/>
+                <br/>  <br/>
+                <label htmlFor="gender">Gender</label>
+                <input type="text" id="gender" name="gender" onChange={getUserInfo}/>
+                <br/>  <br/>
+                <label htmlFor="mobile">Mob No</label>
+                <input type="text" id="mobile" name="mobile" onChange={getUserInfo}/>
+                <br/>  <br/>
+                <input type="submit" value="submit" />
+            </form>
+
+            <FormDetails name={user.name} chToPar={getValue}/>
+        </>
     )
 }

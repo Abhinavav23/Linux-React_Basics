@@ -1,6 +1,7 @@
 import ArrayAsStates from "./ArrayAsStates";
 import { Counter } from "./Counter";
 import { FormExample1 } from "./Forms/FormExample1";
+import { FormExample2 } from "./Forms/formExample2";
 import { SighUpForm } from "./Forms/SignUpForm";
 import NameComp from "./NameComp";
 import { RefTypeState } from "./ReftypeStates";
@@ -26,7 +27,8 @@ export const AppV2 = () => {
             {/* <ArrayAsStates/> */}
             {/* <UpdateBasedOnPrevState/> */}
             {/* <FormExample1/> */}
-            <SighUpForm/>
+            <SighUpForm name='abhinav'/>
+            {/* <FormExample2/> */}
         </div>
     )
 }
