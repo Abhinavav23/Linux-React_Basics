@@ -73,3 +73,14 @@ export const SighUpForm = () => {
         </>
     )
 }
+
+// function test(cb){
+    // let a = 10;
+    // a = 10*30;
+//     cb()
+// }
+
+// function calculate(){
+//     console.log('calculting');
+// }
+// test(calculate)
