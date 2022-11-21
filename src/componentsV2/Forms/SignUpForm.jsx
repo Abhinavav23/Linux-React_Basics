@@ -12,6 +12,7 @@ export const SighUpForm = () => {
     }
 
     const [user, setUser] = useState(userInfo);
+    const[permanentAddress, setPermanentAddress] = useState('default')
 
     const getUserInfo = (e) => {
         // switch case 
@@ -47,6 +48,14 @@ export const SighUpForm = () => {
         console.log(`value recieved is ${val}`);
     }
 
+    // let permanentAddress = '';
+
+    const copyValue = () => {
+        setPermanentAddress(user.address);
+        // permanentAddress = user.address
+        console.log(permanentAddress);
+    }
+
     // when a component re rerenders all its child component also re renders
     return (
         <>
@@ -68,6 +77,16 @@ export const SighUpForm = () => {
                 <br/>  <br/>
                 <input type="submit" value="submit" />
             </form>
+
+
+            {/* <label htmlFor="sameAddress">Present Address same as permanent Address</label> */}
+            <button onClick={copyValue}>copy address</button>
+
+            <br/>
+
+            <label htmlFor="permanentAddress">Permanent Address</label>
+            <input type="text" name="" id="permanentAddress" value={permanentAddress}/>
+
 
             <FormDetails name={user.name} chToPar={getValue}/>
         </>

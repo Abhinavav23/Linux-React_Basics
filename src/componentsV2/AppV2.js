@@ -1,5 +1,6 @@
 import ArrayAsStates from "./ArrayAsStates";
 import { Counter } from "./Counter";
+import UseEffectHook from "./EffectHook/UseEffectHook";
 import { FormExample1 } from "./Forms/FormExample1";
 import { FormExample2 } from "./Forms/formExample2";
 import { SighUpForm } from "./Forms/SignUpForm";
@@ -27,8 +28,9 @@ export const AppV2 = () => {
             {/* <ArrayAsStates/> */}
             {/* <UpdateBasedOnPrevState/> */}
             {/* <FormExample1/> */}
-            <SighUpForm name='abhinav'/>
+            {/* <SighUpForm name='abhinav'/> */}
             {/* <FormExample2/> */}
+            <UseEffectHook/>
         </div>
     )
 }
@@ -38,3 +40,19 @@ export const AppV2 = () => {
 //     printName('Abhinav')
 // }
 // printName
+
+
+// function calculate(a){
+//     fetch('https://someApi.com')
+//     .then((data)=> {
+//         return data
+//     } )
+//     // return a*10
+// }
+
+// calculate(10); 
+// calculate(5);
+
+// async calls
+// api call, timers
+// accessing the Dom
