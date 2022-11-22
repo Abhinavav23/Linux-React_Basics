@@ -1,10 +1,14 @@
+import { useState } from "react";
 import ArrayAsStates from "./ArrayAsStates";
 import { Counter } from "./Counter";
 import UseEffectHook from "./EffectHook/UseEffectHook";
+import { UseEffectHookV2 } from "./EffectHook/useEffectHookV2";
+import { UseEffectHookV3 } from "./EffectHook/UseEffectHookV3";
 import { FormExample1 } from "./Forms/FormExample1";
 import { FormExample2 } from "./Forms/formExample2";
 import { SighUpForm } from "./Forms/SignUpForm";
 import NameComp from "./NameComp";
+import { UseReducerHook } from "./Reduce/UseReducerHook";
 import { RefTypeState } from "./ReftypeStates";
 import UpdateBasedOnPrevState from "./UpdateBasedOnPrevState";
 
@@ -14,6 +18,8 @@ export const AppV2 = () => {
         console.log(name);
         // console.log(`my name is ${name}`);
     }
+    const [show, setShow] = useState(true);
+
     return (
         <div>
             <h2>App version 2.0</h2>
@@ -30,7 +36,11 @@ export const AppV2 = () => {
             {/* <FormExample1/> */}
             {/* <SighUpForm name='abhinav'/> */}
             {/* <FormExample2/> */}
-            <UseEffectHook/>
+            {/* <UseEffectHook/> */}
+            {/* <UseEffectHookV2/> */}
+            {/* {show && <UseEffectHookV3/>} */}
+            {/* <button onClick={() => setShow(false)}>remove UseEffectHookV3</button> */}
+            <UseReducerHook/>
         </div>
     )
 }

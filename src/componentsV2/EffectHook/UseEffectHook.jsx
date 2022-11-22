@@ -53,6 +53,14 @@ useEffect(() => {
   console.log('count from useEffect 3', count1);
 }, [count1])
 
+useEffect(() => {
+  console.log('count from useEffect 4', count2);
+}, [count2])
+
+useEffect(() => {
+  console.log('count from useEffect 5', count2, count1);
+}, [count2, count1])
+
 
   // make an api call when this component loads
   return (
