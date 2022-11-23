@@ -9,6 +9,8 @@ import { FormExample2 } from "./Forms/formExample2";
 import { SighUpForm } from "./Forms/SignUpForm";
 import NameComp from "./NameComp";
 import { UseReducerHook } from "./Reduce/UseReducerHook";
+import { UseReducerV2 } from "./Reduce/useReducerV2";
+import { UseReducerV3 } from "./Reduce/useReducerV3";
 import { RefTypeState } from "./ReftypeStates";
 import UpdateBasedOnPrevState from "./UpdateBasedOnPrevState";
 
@@ -38,9 +40,11 @@ export const AppV2 = () => {
             {/* <FormExample2/> */}
             {/* <UseEffectHook/> */}
             {/* <UseEffectHookV2/> */}
-            {/* {show && <UseEffectHookV3/>} */}
-            {/* <button onClick={() => setShow(false)}>remove UseEffectHookV3</button> */}
-            <UseReducerHook/>
+            {/* {show && <UseEffectHookV3/>}
+            <button onClick={() => setShow(false)}>remove UseEffectHookV3</button> */}
+            {/* <UseReducerHook/> */}
+            {/* <UseReducerV2/> */}
+            <UseReducerV3/>
         </div>
     )
 }
