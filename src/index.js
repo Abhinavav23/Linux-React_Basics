@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
 import {AppV2} from './componentsV2/AppV2'
+import { AppV3 } from './componentsV3/AppV3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <AppV2/>
+ <AppV3/>
 );
 
 
