@@ -10,7 +10,7 @@ export const CompY = () => {
   return (
     <>
       <div>CompY </div>
-      <div>Role - {nameValue}</div>
+      <div>Name - {nameValue.name}</div>
       <div>topic  - {topicValue}</div>
     </>
   )
